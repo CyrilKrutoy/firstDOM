@@ -57,8 +57,8 @@ main()
 
 function getUserBrowserInfo() {
     const browserInfoObj = {
-        userScreenWidth: screen.availWidth,
-        userScreenHeight: screen.availHeight,
+        userScreenWidth: screen.Width,
+        userScreenHeight: screen.Height,
         browserUserAgent: navigator.userAgent,
         userPlatform: navigator.platform
     }
