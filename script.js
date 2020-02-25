@@ -1,4 +1,4 @@
-
+"use strict";
 // // //   First
 
 function getNodesTexts(selector) {
@@ -67,10 +67,9 @@ function getUserBrowserInfo() {
 
 function acceptInfoPage(browserInfos) {
     const elementInfo = document.querySelector('#browserInfo').children;
-    const elementNewFacts = {} = browserInfos;
     for (let i = 0; i < elementInfo.length;) {
-        for (prop in elementNewFacts) {
-            const tempStr = elementInfo[i].innerText.replace("unknown", `${elementNewFacts[prop]}`);
+        for (let prop in browserInfos) {
+            const tempStr = elementInfo[i].innerText.replace("unknown", `${browserInfos[prop]}`);
             elementInfo[i].innerText = tempStr;
             i++
         }
